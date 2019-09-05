@@ -4,6 +4,7 @@ const middy = require('middy');
 const {
   cors
 } = require('middy/middlewares');
+require('dotenv').config();
 
 const nodemailer = require('nodemailer');
 
@@ -43,7 +44,7 @@ const handler = async (event) => {
     console.log(err);
     return {
       statusCode: 500,
-      body: err
+      body: JSON.stringify(err)
     };
   }
 
