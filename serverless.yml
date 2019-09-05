@@ -1,0 +1,19 @@
+service: quiuc-backend
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: dev
+  region: us-east-1
+
+functions:
+  sendEmail:
+    handler: mailer.handler
+    events:
+      - http:
+          path: message
+          method: post
+          cors: true
+
+plugins:
+  - serverless-offline
