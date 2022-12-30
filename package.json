@@ -9,7 +9,7 @@
     "nodemailer": "^6.3.0"
   },
   "devDependencies": {
-    "serverless": "^1.51.0",
+    "serverless": "^1.83.3",
     "serverless-offline": "^5.10.1"
   },
   "scripts": {
